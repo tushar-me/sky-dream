@@ -35,7 +35,7 @@ import PortCard from "@/components/PortCard.vue";
                 </div>
             <div class="w-1/2 "></div>
           </div>
-              <div class="absolute z-10 max-sm:items-center w-full h-screen" >
+              <div class="absolute z-10 max-sm:items-center w-full h-screen " >
                 <img src="@/assets/images/img/hero-section.jpg" class="w-full h-full">
               </div>
         </div>
@@ -45,7 +45,7 @@ import PortCard from "@/components/PortCard.vue";
               <h1 class="font-bold text-4xl uppercase bg-gradient-to-b from-thirdColor to-fourthColor pb-5 text-transparent bg-clip-text">Services</h1>
               <div class="h-1 bg-amber-400 w-28 mt-px"></div>
          </div>
-          <div class="grid grid-cols-3 gap-5 mt-10">
+          <div class="grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
             <ServiceCard/>
             <ServiceCard/>
             <ServiceCard/>

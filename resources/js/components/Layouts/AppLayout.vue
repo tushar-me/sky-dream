@@ -2,7 +2,8 @@
 import SideBar from '@/components/Layouts/SideBar.vue';
 </script>
 <template>
-    <div class="bg-primary w-full h-screen flex ">
+
+    <div class="bg-primary w-full h-screen flex">
         <aside class="w-16 fixed top-0 left-0 bottom-0 h-screen bg-primary">
             <SideBar />
         </aside>

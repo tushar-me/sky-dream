@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 import Button from "@/components/Button.vue";
+import MobileNav from "@/components/MobileNav.vue";
 const isOpen = ref(false);
 
 </script>
 <template>
-    <div>
+   <MobileNav />
+    <div class="hidden lg:block">
         <!-- top manu -->
          <div class="bg-black text-gray-400  flex justify-between items-center py-3">
             <div class="flex items-center">
