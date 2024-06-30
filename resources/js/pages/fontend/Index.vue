@@ -199,64 +199,6 @@ import PortCard from "@/components/PortCard.vue";
             </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                          <!--        <div class=" flex mx-10 gap-20 py-10">-->
-<!--             <div class="w-1/2">-->
-
-
-<!--                <div class="w-full flex gap-2 my-5">-->
-<!--                    <div class="w-1/2 ">-->
-<!--                      <input type="text" placeholder="Your Name" class=" w-full py-4  bg-gray-100 text-gray-700 border border-gray-300">-->
-<!--                    </div>-->
-<!--                    <div class="w-1/2">-->
-<!--                      <input type="email" placeholder="Email Address" class="w-full py-4  bg-gray-100 text-gray-700 border border-gray-300">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="w-full flex gap-2 my-5">-->
-<!--                  <div class="w-1/2">-->
-<!--                    <input type="number" placeholder="Phone Number" class="w-full py-4 bg-gray-100 text-gray-700 border border-gray-300">-->
-<!--                  </div>-->
-<!--                  <div class="w-1/2">-->
-<!--                    <input type="text" placeholder="Select Subjects" class="w-full py-4  bg-gray-100 text-gray-700 border border-gray-300">-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--                <div class="w-full">-->
-<!--                    <textarea name="" id="" placeholder="Phone Number" rows="5" class="w-full bg-gray-100 text-gray-700 border border-gray-300" ></textarea>-->
-<!--                  </div>-->
-<!--                <div class="flex justify-start items-center gap-5 my-10">-->
-<!--                  <button class="flex uppercase justify-center items-center py-4 px-8 text-white bg-amber-600   hover:bg-black  text-base font-semibold ">-->
-<!--                    <p>Send Mesage</p>-->
-<!--                    <svg class="font-semibold " xmlns="http://www.w3.org/2000/svg" width="28"  viewBox="0 0 24 20"><path fill="currentColor" d="m16.289 7.208l-9.766 9.746q-.14.14-.344.13q-.204-.009-.345-.15t-.14-.334t.14-.334L15.582 6.5H6.789q-.213 0-.357-.144t-.143-.357t.143-.356t.357-.143h9.692q.343 0 .575.232t.233.576V16q0 .213-.145.356t-.356.144t-.356-.144t-.144-.356z"/></svg>-->
-<!--                  </button>-->
-<!--                </div>-->
-<!--             </div>-->
-<!--             <div class="w-1/2 bg-amber-600">-->
-<!--              <img src="@/assets/images/img/contact.jpg" class="w-full h-full p-5">-->
-<!--             </div>-->
-<!--        </div>-->
-
   </GuestLayout>
 </template>
 <style scoped>
