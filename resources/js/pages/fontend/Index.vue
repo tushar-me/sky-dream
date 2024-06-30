@@ -9,7 +9,6 @@ import PortCard from "@/components/PortCard.vue";
 <template>
   <GuestLayout>
       <!---------Hero section------------->
-
       <section class="bg-[url(https://as2.ftcdn.net/v2/jpg/00/33/07/75/1000_F_33077580_5RQxiIZ2TwENiWnehethQw6TYlheX0rS.jpg)]
                         relative bg-no-repeat bg-cover bg-center bg-fixed h-screen">
           <span class="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-black bg-opacity-70">
@@ -61,6 +60,7 @@ import PortCard from "@/components/PortCard.vue";
         <div class="container ">
           <div class="text-center flex flex-col justify-center items-center pt-10">
               <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Services</h1>
+
               <div class="h-1 bg-amber-400 w-28 mt-px"></div>
          </div>
           <div class="container grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
@@ -93,6 +93,7 @@ import PortCard from "@/components/PortCard.vue";
                       </div>
                   </div>
               </div>
+
           </div>
           <div class="container bg-sky-gradient text-center py-20 mx-10 -mt-40 relative z-40 flex justify-center items-center">
               <div class="w-1/4">
@@ -121,7 +122,7 @@ import PortCard from "@/components/PortCard.vue";
                 <div class="absolute h-full w-full top-0 bottom-0 left-0 right-0">
                     <img class="w-full h-full" src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/flower-parallax-grey.png?fbclid=IwZXh0bgNhZW0CMTAAAR2R6HLrWcpGd_Xdkha5UL4cRopey5PUS1f5hdHGlVBGInV4BlEHK5lpMuc_aem_Y588DKiJ-DsdFMQfuLNyJg" alt="">
                 </div>
-                <div class="container mx-auto flex flex-wrap justify-center gap-8 relative z-30">
+                <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 relative z-30 justify-items-center gap-10">
                     <PriceCard />
                     <PriceCard />
                     <PriceCard />
@@ -139,7 +140,7 @@ import PortCard from "@/components/PortCard.vue";
 
 
             <div class="container">
-                <div class="grid grid-cols-4 gap-3 py-20">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-3 py-20">
                     <PortCard v-for="item in 4" />
                 </div>
             </div>
@@ -154,24 +155,24 @@ import PortCard from "@/components/PortCard.vue";
                      <div class="h-1 bg-green-400 w-20 mt-px bg-gradient-to-b from-primary to-secondary"></div>
                  </div>
 
-                 <div class=" mx-10 mt-10 relative z-50 bg-opacity-100 flex justify-center items-center">
+                 <div class=" mx-10 mt-10 relative z-50 bg-opacity-100 flex flex-wrap gap-10 lg:gap-0 justify-center items-center">
 
-                     <div class="w-1/4 text-center">
+                     <div class="w-full lg:w-1/4 text-center">
                          <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">1471</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">HDB House</p>
                      </div>
 
-                     <div class="w-1/4 text-center">
+                     <div class="w-full lg:w-1/4 text-center">
                          <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">352</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Condo House</p>
                      </div>
 
-                     <div class="w-1/4 text-center">
+                     <div class="w-full lg:w-1/4 text-center">
                          <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">63</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Landed</p>
                      </div>
 
-                     <div class="w-1/4 text-center">
+                     <div class="w-full lg:w-1/4 text-center">
                          <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">17</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Corporate</p>
                      </div>
@@ -182,9 +183,9 @@ import PortCard from "@/components/PortCard.vue";
       <div class="bg-[url('https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/speckle-man.png?fbclid=IwZXh0bgNhZW0CMTAAAR0Igb4PrTft9TeCu6n3Mg4svCtU4nmzW5JAVrnGoZw2ft5Fm7F6h_YET58_aem_r2kwQT0as8fil78Cc7ifyw')]
                      relative bg-no-repeat bg-cover bg-center bg-fixed pt-5 pb-14">
             <div class="container">
-                <div class="flex items-center pl-20">
-                    <div class="w-1/2">
-                        <div class="p-5 px-16">
+                <div class="flex items-center lg:pl-20">
+                    <div class="w-full lg:w-1/2">
+                        <div class="p-5 lg:px-16">
                             <div class="flex justify-start items-center gap-3">
                                 <p class="uppercase text-amber-600 font-semibold ">Get In Touch</p>
                                 <hr class="w-14 h-1 bg-amber-600 ">

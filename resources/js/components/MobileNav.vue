@@ -5,7 +5,11 @@ const toggleNav = ref(false);
 
 <template>
     <!--  phone nav bar-->
-    <nav class="lg:hidden header-bg-sky-gradient px-5">
+
+
+
+    <nav class="lg:hidden bg-sky-gradient px-5 relative z-50">
+
             <!--        menu & logo  -->
             <div class="flex items-center justify-between">
 
@@ -30,28 +34,19 @@ const toggleNav = ref(false);
 
                         <ul class="px-5 text-secondary">
                             <li class="pt-2">
-                                <RouterLink to="/products">All Products</RouterLink>
+                                <RouterLink to="/">Home</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/category-product">Flyers</RouterLink>
+                                <RouterLink to="/">Services</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/category-product">Booklets</RouterLink>
+                                <RouterLink to="/">Package</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/category-product">Business Cards</RouterLink>
+                                <RouterLink to="/">Portfolio</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/category-product">Posters</RouterLink>
-                            </li>
-                            <li class="pt-2">
-                                <RouterLink to="/category-product">Banners</RouterLink>
-                            </li>
-                            <li class="pt-2">
-                                <RouterLink to="/category-product"> Signs</RouterLink>
-                            </li>
-                            <li class="pt-2">
-                                <RouterLink to="/category-product">Flags</RouterLink>
+                                <RouterLink to="/">About Us</RouterLink>
                             </li>
                         </ul>
                     </div>

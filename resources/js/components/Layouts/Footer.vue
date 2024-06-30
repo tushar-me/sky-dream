@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full bottom-0 flex gap-10 p-10 bg-black text-gray-500 text-base font-semibold">
-      <div class="w-1/4">
+    <div class="w-full  bottom-0 flex flex-wrap gap-10 p-10 bg-black text-gray-500 text-base font-semibold">
+      <div class="w-full lg:w-1/4">
             <img src="@/assets/images/logo.png" class="w-28 h-28" alt="Logo" >
             <p class="mt-10">Quickly supply alternative strategic theme areas vis-à-vis B2C mindshare. Objectively repurpose stand-alone. and managing contractual agreement. A reliable company ensures.</p>
        </div>
-      <div class="w-1/4">
+      <div class="w-full lg:w-1/4">
         <p class="font-semibold text-xl text-white ms-3">Quick Links</p>
         <ul class="mt-5">
             <li class="flex gap-1 py-2 justify-start items-center hover:text-amber-500 cursor-pointer">
@@ -34,7 +34,7 @@
 
         </ul>
       </div>
-      <div class="w-1/4">
+      <div class="w-full lg:w-1/4">
         <p class="font-semibold text-xl text-white">Contact Us</p>
 
         <div class="my-5">
@@ -59,7 +59,7 @@
             </div>
         </div>
       </div>
-      <div class="w-1/4">
+      <div class="w-full lg:w-1/4">
         <div>
             <input type="email" name="email" class="mt-1 px-3 py-4 bg-gray-700  placeholder-slate-400 focus:outline-none focus:border-primary focus:ring-primary block w-full sm:text-sm focus:ring-1" placeholder="Email Address" />
            <Button class="mt-2 bg-sky-gradient text-white py-3 w-full flex justify-center items-center font-bold text-base uppercase">subscribe Now</Button>
@@ -93,14 +93,14 @@
         </div>
       </div>
     </div>
-    <div class="bg-gray-800 text-white flex justify-between px-10 py-4">
+    <div class="bg-gray-800 text-white flex flex-col lg:flex-row justify-between px-10 py-4">
             <div class="font-medium text-xl flex justify-center items-center">
-                <p>Copyright 2024 <span class="text-fourthColor">Sky Dream</span>. All Rights Reserved.</p>
+                <p class="text-center lg:text-start mb-3 lg:mb-0">Copyright 2024 <span class="text-fourthColor">Sky Dream</span>. All Rights Reserved.</p>
             </div>
             <div class="font-medium text-xl flex justify-center items-center gap-5">
-                <p>Terms & Condition </p>
+                <p class="text-sm">Terms & Condition </p>
                 <hr class="h-5 border ">
-                <p>Privacy & Policy</p>
+                <p class="text-sm">Privacy & Policy</p>
             </div>
        </div>
 </template>
