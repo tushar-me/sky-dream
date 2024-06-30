@@ -6,8 +6,7 @@
                                     <Icon name="map:bank" class=" text-xl text-white text-center" />
                                 </span>
             </div>
-            <h5 class="mt-4 text-3xl tracking-wide font-bold text-center
-                      bg-gradient-to-b from-primary to-secondary text-transparent bg-clip-text">
+            <h5 class="mt-4 text-3xl tracking-wide font-bold text-center gradient-text">
                 Painting
             </h5>
             <p class="text-sm font-normal text-gray-500 text-center pt-2">House & Commercial space Painting</p>

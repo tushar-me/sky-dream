@@ -40,7 +40,7 @@ import PortCard from "@/components/PortCard.vue";
                   </div>
               </div>
               <div class="w-full lg:w-1/2">
-                  <div class="flex flex-wrap">
+                  <div class="flex flex-wrap lg:flex-col">
                       <div class="w-full lg:w-1/2 p-2" v-for="item in 4">
                           <div class="relative w-full overflow-hidden group transition-all ease-in-out duration-1000">
                               <div class="absolute z-50 p-5 w-full h-full top-0 bottom-0 right-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-700">
@@ -60,7 +60,6 @@ import PortCard from "@/components/PortCard.vue";
         <div class="container ">
           <div class="text-center flex flex-col justify-center items-center pt-10">
               <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Services</h1>
-
               <div class="h-1 bg-amber-400 w-28 mt-px"></div>
          </div>
           <div class="container grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
@@ -72,16 +71,15 @@ import PortCard from "@/components/PortCard.vue";
         <!---------Consultation Contact Us------------->
       <section class="bg-[url(https://img.freepik.com/free-photo/top-view-blue-paint-brush-strokes-surface_23-2148815435.jpg?t=st=1719739976~exp=1719743576~hmac=202788a852e75aba7d7452d5467f5aa72e00e2838d46b748dd3e12461dbd4cf2&w=740)]
                         relative bg-no-repeat bg-cover bg-center h-screen mt-20">
-          <div class="container  relative flex w-full  justify-center items-center h-lvh overflow-hidden">
-              <div class="w-full h-screen mb-10 flex justify-start items-center opacity-100 relative z-30 bg-opacity-50">
-
-                  <div class="w-2/3 ">
+          <div class="container flex w-full justify-center items-center">
+              <div class="w-full h-screen mb-10 flex justify-start items-center relative z-30">
+                  <div class="w-1/2 ">
                       <div>
-                          <div class="flex justify-start items-center gap-3">
-                              <p class="uppercase text-amber-600 font-bold text-xl">Get consultation </p>
-                              <hr class="w-20 h-1 bg-white">
+                          <div class="flex items-center gap-3">
+                              <p class="uppercase text-white font-bold text-xl">Get consultation </p>
+                              <hr class="w-20 border-2 bg-white">
                           </div>
-                          <h1 class="text-5xl text-white tracking-widest font-bold my-10 me-20 animate-pulse">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
+                          <h1 class="text-5xl text-white tracking-widest leading-1 font-bold my-10">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
                           <div class="flex justify-start items-center gap-5 my-10">
                               <RouterLink to="/Contact" class="group" >
                                   <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
@@ -92,10 +90,15 @@ import PortCard from "@/components/PortCard.vue";
                           </div>
                       </div>
                   </div>
+                  <div class="w-1/2">
+                      <div class="w-full h-full">
+                          <img src="https://img.freepik.com/free-photo/man-working-wall-with-paint-roller_23-2148384435.jpg?t=st=1719746200~exp=1719749800~hmac=2d0cb6fe9ad18923ed8cdda8b8f7bba0077f7098ecad4ea48a44bde2018961b9&w=740" alt="">
+                      </div>
+                  </div>
               </div>
 
           </div>
-          <div class="container bg-sky-gradient text-center py-20 mx-10 -mt-40 relative z-40 flex justify-center items-center">
+          <div class="container bg-sky-gradient text-center py-16 mx-10 -mt-40 relative z-40 flex justify-center items-center">
               <div class="w-1/4">
                   <h1 class="font-bold text-6xl text-white">2k+</h1>
                   <p class="text-xl text-white font-normal">Project Completed</p>
@@ -108,7 +111,7 @@ import PortCard from "@/components/PortCard.vue";
                   <h1 class="font-bold text-6xl text-white">360+</h1>
                   <p class="text-xl text-white font-normal">Expert Team Members</p>
               </div>
-              <div class="w-1/4 ps-1">
+              <div class="w-1/4">
                   <h1 class="font-bold text-6xl text-white">85+</h1>
                   <p class="text-xl font-normal text-white">Awards Winner</p>
               </div>
@@ -122,7 +125,14 @@ import PortCard from "@/components/PortCard.vue";
                 <div class="absolute h-full w-full top-0 bottom-0 left-0 right-0">
                     <img class="w-full h-full" src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/flower-parallax-grey.png?fbclid=IwZXh0bgNhZW0CMTAAAR2R6HLrWcpGd_Xdkha5UL4cRopey5PUS1f5hdHGlVBGInV4BlEHK5lpMuc_aem_Y588DKiJ-DsdFMQfuLNyJg" alt="">
                 </div>
-                <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 relative z-30 justify-items-center gap-10">
+
+                <div class="text-center flex flex-col justify-center items-center ">
+                    <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Pricing & Plan </h1>
+                    <div class="h-1 bg-amber-400 w-28 mt-px"></div>
+                </div>
+
+                <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 relative z-30 justify-items-center gap-10 pt-10">
+                    <PriceCard />
                     <PriceCard />
                     <PriceCard />
                     <PriceCard />
@@ -132,10 +142,10 @@ import PortCard from "@/components/PortCard.vue";
         <!--------------Portfolio------------------->
         <div class="bg-[url('https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/speckle.png?fbclid=IwZXh0bgNhZW0CMTAAAR3wevHtr2kWtAY0XdDgiO8BufLc8XnlQSmfwkRDYlVi6k-S4-88SuNlFwU_aem_Zfa6x_hwmOyABWT5T9JYzg')]
                     relative bg-no-repeat bg-cover bg-center bg-fixed py-10 my-10 pb-5 ">
+
             <div class="text-center flex flex-col justify-center items-center ">
-                  <h1 class="font-bold text-4xl uppercase animate-pulse
-                            bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text pb-5">Our Portfolio</h1>
-                  <div class="h-1 w-56 mt-px bg-gradient-to-b from-thirdColor to-fourthColor"></div>
+                <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">our Portfolio</h1>
+                <div class="h-1 bg-primary w-28 mt-px"></div>
             </div>
 
 
@@ -150,30 +160,30 @@ import PortCard from "@/components/PortCard.vue";
                        relative bg-no-repeat bg-cover bg-center bg-fixed pt-5 py-14 ">
              <div class="container py-10 h-full w-full bg-green-950 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-4 border-gray-100">
 
-                 <div class="text-center flex flex-col justify-center items-center">
-                     <h1 class="font-bold text-4xl uppercase bg-gradient-to-b from-primary to-secondary text-transparent bg-clip-text pb-5">Facts</h1>
-                     <div class="h-1 bg-green-400 w-20 mt-px bg-gradient-to-b from-primary to-secondary"></div>
+                 <div class="text-center flex flex-col justify-center items-center ">
+                     <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">fact</h1>
+                     <div class="h-1 bg-primary w-28 mt-px"></div>
                  </div>
 
                  <div class=" mx-10 mt-10 relative z-50 bg-opacity-100 flex flex-wrap gap-10 lg:gap-0 justify-center items-center">
 
                      <div class="w-full lg:w-1/4 text-center">
-                         <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">1471</h1>
+                         <h1 class="font-bold text-5xl gradient-text">1471</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">HDB House</p>
                      </div>
 
                      <div class="w-full lg:w-1/4 text-center">
-                         <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">352</h1>
+                         <h1 class="font-bold text-5xl gradient-text">352</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Condo House</p>
                      </div>
 
                      <div class="w-full lg:w-1/4 text-center">
-                         <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">63</h1>
+                         <h1 class="font-bold text-5xl gradient-text">63</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Landed</p>
                      </div>
 
                      <div class="w-full lg:w-1/4 text-center">
-                         <h1 class="font-bold text-5xl bg-gradient-to-b from-thirdColor to-fourthColor text-transparent bg-clip-text">17</h1>
+                         <h1 class="font-bold text-5xl gradient-text">17</h1>
                          <p class="text-base font-medium pt-1 text-gray-600">Corporate</p>
                      </div>
                  </div>
@@ -190,7 +200,7 @@ import PortCard from "@/components/PortCard.vue";
                                 <p class="uppercase text-amber-600 font-semibold ">Get In Touch</p>
                                 <hr class="w-14 h-1 bg-amber-600 ">
                             </div>
-                            <h1 class="text-3xl text-gray-500 py-2 font-medium">Have An Upcoming Projects? Let’s Talk to Now!</h1>
+                            <h1 class="text-3xl gradient-text py-2 font-medium">Have An Upcoming Projects? Let’s Talk to Now!</h1>
                             <div class="w-full flex gap-2 my-5">
                                 <div class="w-1/2 ">
                                     <input type="text" placeholder="First Name" class=" w-full bg-gray-100 text-gray-700 border border-gray-300 placeholder:text-sm rounded">

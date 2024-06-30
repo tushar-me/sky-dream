@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import {Autoplay } from 'swiper/modules';
 const  modules=[ Autoplay ]
-  
+
 </script>
 <template>
 <GuestLayout>
@@ -26,7 +26,6 @@ const  modules=[ Autoplay ]
         <h3 class="text-gray-800 font-normal text-base my-1"><span class="font-semibold text-xl text-black me-2">Speciality :</span>100 % satisfied and one day finish job.</h3>
         <h3 class="font-semibold text-xl text-black mt-10">Short Breaf :</h3>
         <p class="text-gray-800 font-normal text-base mt-3">Revamp Your Condo with our Exclusive Painting Company's Condo Package Our painting company is proud to offer an exclusive condo package designed to breathe new life into your living space. With our expertise and attention to detail, we provide a comprehensive solution for transforming your condo into a stylish and inviting home.</p>
-
       </div>
     </div>
     <div class="mt-10 border border-gray-300 rounded">
@@ -77,7 +76,7 @@ const  modules=[ Autoplay ]
       <div class="text-center flex flex-col justify-center items-center">
         <h1 class="font-bold text-4xl uppercase">Related Packages</h1>
         <div class="h-1 bg-amber-400 w-60 mt-px"></div>
-      </div> 
+      </div>
       <div class="my-10">
         <swiper
           ref="{swiperRef}"
@@ -88,7 +87,7 @@ const  modules=[ Autoplay ]
             delay: 2500,
             disableOnInteraction: false,
           }"
-          
+
           :modules="modules"
           class="mySwiper"
         >
@@ -104,7 +103,7 @@ const  modules=[ Autoplay ]
       </div>
     </div>
   </div>
-  
-  
+
+
 </GuestLayout>
 </template>
