@@ -1,5 +1,5 @@
 <template>
-    <div class="w-1/4">
+    <div class="w-full">
         <div class="bg-white h-auto rounded-2xl  border border-primary shadow shadow-primary">
             <div class="flex justify-center pt-10 text-center">
                                 <span class="flex items-center justify-center bg-gradient-to-b from-thirdColor to-fourthColor w-12 h-12 rounded-full shadow-lg ">

@@ -1,7 +1,4 @@
 <script setup> 
-    import BarChart from '@/components/Chart/BarChart.vue';
-    import TopProducts from '@/components/TopProducts.vue';
-    import RecentOrder from '@/components/RecentOrder.vue';
 </script>
 <template>
     <AppLayout>
@@ -124,18 +121,18 @@
     <div class="flex -mx-2" >
         <div class="w-2/3 px-2">
             <div class="p-4 shado">
-                <BarChart />
+                <!-- <BarChart /> -->
             </div>
         </div>
         <div class="w-1/3 px-2">
             <div class="shadow-md">
-                <TopProducts />
+                <!-- <TopProducts /> -->
             </div>
         </div>
     </div>
 
     <div class="mt-5 hadow-md">
-        <RecentOrder />
+        <!-- <RecentOrder /> -->
     </div>
     </AppLayout>
 </template>
