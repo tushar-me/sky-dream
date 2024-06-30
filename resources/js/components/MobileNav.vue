@@ -5,7 +5,7 @@ const toggleNav = ref(false);
 
 <template>
     <!--  phone nav bar-->
-    <nav class="lg:hidden bg-sky-gradient px-5">
+    <nav class="lg:hidden header-bg-sky-gradient px-5">
             <!--        menu & logo  -->
             <div class="flex items-center justify-between">
 

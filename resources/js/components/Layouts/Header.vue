@@ -7,7 +7,7 @@ const isOpen = ref(false);
 </script>
 <template>
    <MobileNav />
-    <div class="hidden lg:block">
+    <div class="hidden lg:block fixed top-0 left-0 right-0 w-full z-50">
         <!-- top manu -->
          <div class="bg-black text-gray-400  flex justify-between items-center py-3">
             <div class="flex items-center">
@@ -45,7 +45,7 @@ const isOpen = ref(false);
             </div>
          </div>
         <!-- main manu -->
-        <div class="bg-sky-gradient">
+        <div class="header-bg-sky-gradient">
             <div class=" flex justify-center items-center container" >
                 <RouterLink to="/" class="flex justify-center items-center ">
                     <img class="w-24 h-24 py-2" src="@/assets/images/logo.png"  alt="Logo" >

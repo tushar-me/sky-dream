@@ -56,6 +56,17 @@
     background-image: linear-gradient(to right, #3DA29C, #3F5FBB, #C41271, #CDA42C);
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
+//header bg css
+.header-bg-sky-gradient{
+    background-image: linear-gradient(to right, #CDA42C, #C41271, #3F5FBB,#3DA29C);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+//gradient -text css
+.gradient-text {
+    background: linear-gradient(to right, #3DA29C, #3F5FBB, #C41271, #CDA42C);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 /* hamburg menu */
 .elegance-hamburger-menu {
     @apply inline-flex;

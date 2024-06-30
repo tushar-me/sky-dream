@@ -9,98 +9,115 @@ import PortCard from "@/components/PortCard.vue";
 <template>
   <GuestLayout>
       <!---------Hero section------------->
-        <div class="relative flex w-full  justify-center items-center h-screen overflow-hidden">
-            <div class="w-full h-screen flex justify-start items-center opacity-100 relative z-30 bg-opacity-50">
-                <div class="w-1/2 ms-20 " >
-                     <div class="flex justify-start items-center gap-3">
-                        <p class="uppercase text-amber-600 font-bold text-2xl bg-gradient-to-b from-fourthColor to-thirdColor text-transparent bg-clip-text">we build, you thrive </p>
-                        <hr class="w-24 h-1 bg-amber-500 border">
-                     </div>
-                        <h1 class="flex uppercase justify-start items-center text-6xl tracking-wide font-black my-10 bg-gradient-to-b from-primary to-secondary text-transparent bg-clip-text animate-pulse">Building beyond boundaries.</h1>
-                         <p class="flex justify-start items-center font-normal text-lg text-gray-500 my-5 pe-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda asperiores sit ipsa vero architecto.</p>
-                    <div class="flex justify-start items-center gap-5 my-10">
-                        <RouterLink to="/Contact" class="group" >
-                            <Button class="uppercase flex justify-center items-center gap-3  text-white py-3 px-5 font-semibold ">
-                                <Icon name="material-symbols:arrow-outward" class=" text-2xl text-white "/>
-                                discover More
-                            </Button>
-                        </RouterLink>
-                        <RouterLink to="/Contact" class="group" >
-                            <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white border-2 border-primary py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
-                                <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
-                                 Our Services
-                            </button>
-                        </RouterLink>
-                    </div>
-                </div>
-            <div class="w-1/2 "></div>
-          </div>
-              <div class="absolute z-10 max-sm:items-center w-full h-screen " >
-                <img src="@/assets/images/img/hero-section.jpg" class="w-full h-full">
+
+      <section class="bg-[url(https://as2.ftcdn.net/v2/jpg/00/33/07/75/1000_F_33077580_5RQxiIZ2TwENiWnehethQw6TYlheX0rS.jpg)]
+                        relative bg-no-repeat bg-cover bg-center bg-fixed h-screen">
+          <span class="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-black bg-opacity-70">
+          </span>
+          <div class="container flex items-center relative z-40 h-screen pt-32">
+
+              <div class="w-1/2" >
+                  <div class="">
+                      <div class="flex justify-start items-center gap-3">
+                          <p class="uppercase text-white font-bold text-xl">we build, you thrive </p>
+                          <hr class="w-24 text-white border-2">
+                      </div>
+                      <h1 class="uppercase text-5xl tracking-wide font-bold text-white py-10">Building beyond boundaries.</h1>
+                      <p class="font-normal text-md text-white max-w-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda asperiores sit ipsa vero architecto.</p>
+                      <div class="flex items-center gap-5 py-10">
+                          <RouterLink to="/Contact" class="group" >
+                              <Button class="uppercase flex justify-center items-center gap-3  text-white py-3 px-5 font-semibold ">
+                                  <Icon name="material-symbols:arrow-outward" class=" text-2xl text-white "/>
+                                  discover More
+                              </Button>
+                          </RouterLink>
+                          <RouterLink to="/Contact" class="group" >
+                              <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white border-2 border-primary py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
+                                  <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
+                                  Our Services
+                              </button>
+                          </RouterLink>
+                      </div>
+                  </div>
               </div>
-        </div>
+              <div class="w-full lg:w-1/2">
+                  <div class="flex flex-wrap">
+                      <div class="w-full lg:w-1/2 p-2" v-for="item in 4">
+                          <div class="relative w-full overflow-hidden group transition-all ease-in-out duration-1000">
+                              <div class="absolute z-50 p-5 w-full h-full top-0 bottom-0 right-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-700">
+                                  <div class="flex items-center justify-center border w-full h-full">
+                                      <h2 class="text-white text-lg font-medium animate-none">Painting Management</h2>
+                                  </div>
+                              </div>
+                              <img class="w-full h-full object-cover group-hover:scale-110 transition-all ease-in-out duration-500" src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/gallery6.jpg" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
         <!------------servises------------------->
-        <div class="mx-20 my-10">
-          <div class="text-center flex flex-col justify-center items-center">
-              <h1 class="font-bold text-4xl uppercase bg-gradient-to-b from-thirdColor to-fourthColor pb-5 text-transparent bg-clip-text">Services</h1>
+        <div class="container ">
+          <div class="text-center flex flex-col justify-center items-center pt-10">
+              <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Services</h1>
               <div class="h-1 bg-amber-400 w-28 mt-px"></div>
          </div>
-          <div class="grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
+          <div class="container grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
             <ServiceCard/>
             <ServiceCard/>
             <ServiceCard/>
           </div>
         </div>
         <!---------Consultation Contact Us------------->
-        <div class="relative flex w-full  justify-center items-center h-lvh overflow-hidden">
-          <div class="w-full h-screen mb-10 flex justify-start items-center opacity-100 relative z-30 bg-opacity-50">
-            <div class="w-1/3 px-10" >
-              <img src="@/assets/images/img/consultion-man.jpg" class="bg-cover">
-            </div>
-            <div class="w-2/3 ">
-                <div>
-                    <div class="flex justify-start items-center gap-3">
-                        <p class="uppercase text-amber-600 font-bold text-xl">Get consultation </p>
-                        <hr class="w-20 h-1 bg-white">
-                    </div>
-                    <h1 class="text-5xl text-white tracking-widest font-bold my-10 me-20 animate-pulse">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
-                    <div class="flex justify-start items-center gap-5 my-10">
-                        <RouterLink to="/Contact" class="group" >
-                            <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
-                                <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
-                                Contact us
-                            </button>
-                        </RouterLink>
-                    </div>
-                </div>
-            </div>
+      <section class="bg-[url(https://img.freepik.com/free-photo/top-view-blue-paint-brush-strokes-surface_23-2148815435.jpg?t=st=1719739976~exp=1719743576~hmac=202788a852e75aba7d7452d5467f5aa72e00e2838d46b748dd3e12461dbd4cf2&w=740)]
+                        relative bg-no-repeat bg-cover bg-center h-screen mt-20">
+          <div class="container  relative flex w-full  justify-center items-center h-lvh overflow-hidden">
+              <div class="w-full h-screen mb-10 flex justify-start items-center opacity-100 relative z-30 bg-opacity-50">
+
+                  <div class="w-2/3 ">
+                      <div>
+                          <div class="flex justify-start items-center gap-3">
+                              <p class="uppercase text-amber-600 font-bold text-xl">Get consultation </p>
+                              <hr class="w-20 h-1 bg-white">
+                          </div>
+                          <h1 class="text-5xl text-white tracking-widest font-bold my-10 me-20 animate-pulse">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
+                          <div class="flex justify-start items-center gap-5 my-10">
+                              <RouterLink to="/Contact" class="group" >
+                                  <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
+                                      <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
+                                      Contact us
+                                  </button>
+                              </RouterLink>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="absolute z-10 max-sm:items-center w-full" >
-            <img src="@/assets/images/img/Consultation.jpg" class="w-full h-full">
+          <div class="container bg-sky-gradient text-center py-20 mx-10 -mt-40 relative z-40 flex justify-center items-center">
+              <div class="w-1/4">
+                  <h1 class="font-bold text-6xl text-white">2k+</h1>
+                  <p class="text-xl text-white font-normal">Project Completed</p>
+              </div>
+              <div class="w-1/4">
+                  <h1 class="font-bold text-6xl text-white">1.5k+</h1>
+                  <p class="text-xl text-white font-normal">Customer Satisfied</p>
+              </div>
+              <div class="w-1/4">
+                  <h1 class="font-bold text-6xl text-white">360+</h1>
+                  <p class="text-xl text-white font-normal">Expert Team Members</p>
+              </div>
+              <div class="w-1/4 ps-1">
+                  <h1 class="font-bold text-6xl text-white">85+</h1>
+                  <p class="text-xl font-normal text-white">Awards Winner</p>
+              </div>
           </div>
-        </div>
-        <div class="bg-sky-gradient h-60 p-10 mx-10 -mt-40  relative z-50 bg-opacity-100 flex justify-center items-center bg-amber-600 ">
-            <div class="w-1/4 ps-10">
-              <h1 class="font-bold text-6xl  text-white">2k+</h1>
-              <p class="text-xl text-white font-normal pt-1">Project Completed</p>
-            </div>
-            <div class="w-1/4 ps-10">
-              <h1 class="font-bold text-6xl text-white">1.5k+</h1>
-              <p class="text-xl text-white font-normal pt-1">Customer Satisfied</p>
-            </div>
-            <div class="w-1/4 ps-10">
-              <h1 class="font-bold text-6xl text-white">360+</h1>
-              <p class="text-xl text-white font-normal pt-1">Expert Team Members</p>
-            </div>
-            <div class="w-1/4 ps-10">
-              <h1 class="font-bold text-6xl text-white">85+</h1>
-              <p class="text-xl font-normal pt-1 text-white ">Awards Winner</p>
-            </div>
-        </div>
+      </section>
+
         <!-----------price card----------------->
 
             <div class="bg-[url('https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/flower-parallax-color.png?fbclid=IwZXh0bgNhZW0CMTAAAR2CoaBVw7vs8DwY2hoDfss8yGWStybP4VoToZSB4tJDgY1V1IZaOexRcTo_aem_mdQvljFZEEFNrlWUqGKxYg')]
-                       relative bg-no-repeat bg-cover bg-center bg-fixed py-10 my-10">
+                       relative bg-no-repeat bg-cover bg-center bg-fixed py-10 my-10 mt-32">
                 <div class="absolute h-full w-full top-0 bottom-0 left-0 right-0">
                     <img class="w-full h-full" src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/flower-parallax-grey.png?fbclid=IwZXh0bgNhZW0CMTAAAR2R6HLrWcpGd_Xdkha5UL4cRopey5PUS1f5hdHGlVBGInV4BlEHK5lpMuc_aem_Y588DKiJ-DsdFMQfuLNyJg" alt="">
                 </div>
