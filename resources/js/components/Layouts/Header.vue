@@ -48,21 +48,21 @@ const isOpen = ref(false);
         <div class="header-bg-sky-gradient">
             <div class=" flex justify-center items-center container" >
                 <RouterLink to="/" class="flex justify-center items-center ">
-                    <img class="w-24 h-24 py-2" src="@/assets/images/logo.png"  alt="Logo" >
+                    <img class="w-16 h-16 py-2 border-2 border-white rounded-full m-2 p-3" src="@/assets/images/logo.png"  alt="Logo" >
                 </RouterLink>
                 <div class=" w-full  flex justify-center items-center">
                     <div class="w-full flex justify-start items-center font-semibold gap-10 uppercase text-base text-white ps-10">
                         <RouterLink to="/" class="">Home</RouterLink>
-                        <RouterLink to="/Services" class="">Services</RouterLink>
-                        <RouterLink to="/Package" class="">Package</RouterLink>
-                        <RouterLink to="/Portfolio" class="">Portfolio</RouterLink>
-                        <RouterLink to="/Aboutus" class="">About Us</RouterLink>
+                        <RouterLink to="/services" class="">Services</RouterLink>
+                        <RouterLink to="/package" class="">Package</RouterLink>
+                        <RouterLink to="/portfolio" class="">Portfolio</RouterLink>
+                        <RouterLink to="/about" class="">About Us</RouterLink>
                     </div>
                     <div class="w-1/3 flex justify-center items-center gap-10">
                         <div @click="isOpen = true" class="flex justify-center items-center border-2 border-white hover:border-primary hover:bg-white rounded-full w-12 h-12 transition-all ease-in-out duration-500">
                             <Icon name="ic:round-dashboard" class=" text-2xl text-white hover:text-primary" />
                         </div>
-                        <RouterLink to="/Contact" class="group" >
+                        <RouterLink to="/contact" class="group" >
                             <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
                                 <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
                                 Contact us

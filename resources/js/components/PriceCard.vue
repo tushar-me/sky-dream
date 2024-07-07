@@ -2,9 +2,9 @@
     <div class="w-full">
         <div class="bg-white h-auto rounded-2xl  border border-primary shadow shadow-primary">
             <div class="flex justify-center pt-10 text-center">
-                                <span class="flex items-center justify-center bg-gradient-to-b from-thirdColor to-fourthColor w-12 h-12 rounded-full shadow-lg ">
-                                    <Icon name="map:bank" class=" text-xl text-white text-center" />
-                                </span>
+                <span class="flex items-center justify-center bg-gradient-to-b from-thirdColor to-fourthColor w-12 h-12 rounded-full shadow-lg ">
+                    <Icon name="map:bank" class=" text-xl text-white text-center" />
+                </span>
             </div>
             <h5 class="mt-4 text-3xl tracking-wide font-bold text-center gradient-text">
                 Painting

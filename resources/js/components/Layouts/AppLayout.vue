@@ -4,11 +4,11 @@ import SideBar from '@/components/Layouts/SideBar.vue';
 <template>
 
     <div class="bg-primary w-full h-screen flex">
-        <aside class="w-16 fixed top-0 left-0 bottom-0 h-screen bg-primary">
+        <aside class="w-44 fixed top-0 left-0 bottom-0 h-screen bg-primary">
             <SideBar />
         </aside>
-        <main class="ml-16 w-full h-screen bg-slate-100 p-4 pb-10">
-            <div>
+        <main class="ml-44 w-full h-screen bg-slate-100 p-4 pb-10">
+            <div class="pb-1">
                 <slot />
             </div>
         </main>

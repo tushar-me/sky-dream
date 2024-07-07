@@ -10,32 +10,32 @@ const router = createRouter({
       component: () => import('@/pages/fontend/Index.vue')
     },
     {
-      path: '/Services',
+      path: '/services',
       name: 'Services',
       component: () => import('@/pages/fontend/Services.vue')
     },
     {
-      path: '/Package',
+      path: '/package',
       name: 'Package',
       component: () => import('@/pages/fontend/Package.vue')
     },
     {
-      path: '/Portfolio',
+      path: '/portfolio',
       name: 'Portfolio',
       component: () => import('@/pages/fontend/Portfolio.vue')
     },
     {
-      path: '/Contact',
+      path: '/contact',
       name: 'Contact',
       component: () => import('@/pages/fontend/Contact.vue')
     },
     {
-      path: '/Aboutus',
-      name: 'Aboutus',
-      component: () => import('@/pages/fontend/Aboutus.vue')
+      path: '/about',
+      name: 'About',
+      component: () => import('@/pages/fontend/About.vue')
     },
     {
-      path: '/Service-Details',
+      path: '/service-details',
       name: 'Service-Details',
       component: () => import('@/pages/fontend/ServiceDetails.vue')
     },
@@ -43,6 +43,21 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('@/pages/Dashboard/Index.vue')
+    },
+    {
+      path: '/dashboard/services',
+      name: 'Services',
+      component: () => import('@/pages/Dashboard/Services/Index.vue')
+    },
+    {
+      path: '/dashboard/package',
+      name: 'Package',
+      component: () => import('@/pages/Dashboard/Package/Index.vue')
+    },
+    {
+      path: '/dashboard/gallary',
+      name: 'Gallary',
+      component: () => import('@/pages/Dashboard/Gallary/Index.vue')
     },
    
     

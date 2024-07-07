@@ -40,7 +40,7 @@ import PortCard from "@/components/PortCard.vue";
                   </div>
               </div>
               <div class="w-full lg:w-1/2">
-                  <div class="flex flex-wrap lg:flex-col">
+                  <div class="flex flex-wrap">
                       <div class="w-full lg:w-1/2 p-2" v-for="item in 4">
                           <div class="relative w-full overflow-hidden group transition-all ease-in-out duration-1000">
                               <div class="absolute z-50 p-5 w-full h-full top-0 bottom-0 right-0 left-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-700">
@@ -48,7 +48,8 @@ import PortCard from "@/components/PortCard.vue";
                                       <h2 class="text-white text-lg font-medium animate-none">Painting Management</h2>
                                   </div>
                               </div>
-                              <img class="w-full h-full object-cover group-hover:scale-110 transition-all ease-in-out duration-500" src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/gallery6.jpg" alt="">
+                              <img class="w-full h-full object-cover group-hover:scale-110 transition-all ease-in-out duration-500"
+                                   src="https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/gallery6.jpg" alt="">
                           </div>
                       </div>
                   </div>
@@ -158,7 +159,7 @@ import PortCard from "@/components/PortCard.vue";
         <!-----------facts---------------->
          <div class="bg-[url('https://dtpainting.wpenginepowered.com/wp-content/uploads/2016/03/flower-parallax-color.png?fbclid=IwZXh0bgNhZW0CMTAAAR2CoaBVw7vs8DwY2hoDfss8yGWStybP4VoToZSB4tJDgY1V1IZaOexRcTo_aem_mdQvljFZEEFNrlWUqGKxYg')]
                        relative bg-no-repeat bg-cover bg-center bg-fixed pt-5 py-14 ">
-             <div class="container py-10 h-full w-full bg-green-950 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-4 border-gray-100">
+             <div class="container py-10 h-full w-full bg-fourthColor rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border-4 border-gray-100">
 
                  <div class="text-center flex flex-col justify-center items-center ">
                      <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">fact</h1>
