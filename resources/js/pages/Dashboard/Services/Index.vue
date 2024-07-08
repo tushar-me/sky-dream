@@ -20,12 +20,12 @@
                 </div>
             </div>
             
-            <div >
+            <RouterLink to="/dashboard/services/add" >
                 <button class="flex items-center justify-center gap-2 bg-primary px-5 py-2 text-white text-lg font-medium">
                     <Icon name="streamline:interface-add-circle-button-remove-cross-add-buttons-plus-circle"  class="text-sm shadow-lg border-primary" />
                     Add Record
                 </button>
-            </div>
+            </RouterLink>
        </div>
        <!--service  table -->
        <div class="relative overflow-x-auto mt-10">
@@ -91,6 +91,7 @@
  
  <script setup>
     import AppLayout from "@/components/Layouts/AppLayout.vue";
+    import { RouterLink } from "vue-router";
  </script>
  
  <style scoped>

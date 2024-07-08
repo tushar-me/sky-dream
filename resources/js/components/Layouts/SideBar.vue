@@ -47,7 +47,7 @@ const props = defineProps({
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink  to="/" class="flex items-center gap-2">
+                    <RouterLink  to="/dashboard/setting" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon name="material-symbols:settings-outline-rounded" size="20" class="text-white" />
                         </div>

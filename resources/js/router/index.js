@@ -50,16 +50,35 @@ const router = createRouter({
       component: () => import('@/pages/Dashboard/Services/Index.vue')
     },
     {
+      path: '/dashboard/services/add',
+      name: 'AddServices',
+      component: () => import('@/pages/Dashboard/Services/Add.vue')
+    },
+    {
       path: '/dashboard/package',
       name: 'Package',
       component: () => import('@/pages/Dashboard/Package/Index.vue')
+    },
+    {
+      path: '/dashboard/package/add',
+      name: 'AddPackage',
+      component: () => import('@/pages/Dashboard/Package/Add.vue')
     },
     {
       path: '/dashboard/gallary',
       name: 'Gallary',
       component: () => import('@/pages/Dashboard/Gallary/Index.vue')
     },
-   
+    {
+      path: '/dashboard/gallary/add',
+      name: 'AddGallary',
+      component: () => import('@/pages/Dashboard/Gallary/Add.vue')
+    },
+    {
+      path: '/dashboard/setting',
+      name: 'Setting',
+      component: () => import('@/pages/Dashboard/Setting/Index.vue')
+    },
     
   ]
 })
