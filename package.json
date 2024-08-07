@@ -23,6 +23,7 @@
         "vue-tsc": "^2.0.11"
     },
     "dependencies": {
+        "@vueup/vue-quill": "^1.2.0",
         "chart.js": "^4.4.2",
         "flowbite": "^2.3.0",
         "flowbite-vue": "^0.1.5",
@@ -33,6 +34,6 @@
         "vue-datepicker-ui": "^3.1.1",
         "vue-router": "^4.3.0",
         "vue-select": "^4.0.0-beta.6",
-        "@vueup/vue-quill": "^1.2.0"
+        "vue-toastification": "^2.0.0-rc.5"
     }
 }

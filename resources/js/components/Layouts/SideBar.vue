@@ -15,7 +15,7 @@ const props = defineProps({
             </div>
             <ul class="flex flex-col gap-5 p-5 ">
                 <li>
-                    <RouterLink to="/dashboard" class="flex items-center gap-2">
+                    <RouterLink :to="{name:'Dashboard'}" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon name="ic:twotone-dashboard-customize" size="20" class="text-white" />
                         </div>
@@ -23,7 +23,7 @@ const props = defineProps({
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/dashboard/services" class="flex items-center gap-2">
+                    <RouterLink :to="{name:'Services'}" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon name="material-symbols:service-toolbox-sharp" size="20" class="text-white" />
                         </div>
@@ -31,7 +31,7 @@ const props = defineProps({
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink  to="/dashboard/package" class="flex items-center gap-2">
+                    <RouterLink :to="{name:'Package'}" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon   name="carbon:ibm-data-product-exchange" size="20" class="text-white" />
                         </div>
@@ -39,7 +39,7 @@ const props = defineProps({
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink  to="/dashboard/gallary" class="flex items-center gap-2">
+                    <RouterLink  :to="{name:'Gallery'}" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon name="solar:gallery-check-bold" size="20" class="text-white" />
                         </div>
@@ -47,7 +47,15 @@ const props = defineProps({
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink  to="/dashboard/setting" class="flex items-center gap-2">
+                    <RouterLink  :to="{name:'Contacts'}" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
+                            <Icon name="solar:gallery-check-bold" size="20" class="text-white" />
+                        </div>
+                        <p  v-if="text" class="text-white">Contacts</p>
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink  :to="{name:'Setting'}" class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-slate-400/50 border border-gray-100/50 rounded-full flex items-center justify-center">
                             <Icon name="material-symbols:settings-outline-rounded" size="20" class="text-white" />
                         </div>
@@ -55,7 +63,7 @@ const props = defineProps({
                     </RouterLink>
                 </li>
             </ul>
-            
+
         </div>
     </div>
 
