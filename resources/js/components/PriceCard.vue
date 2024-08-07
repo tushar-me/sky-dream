@@ -11,7 +11,7 @@
             </h5>
             <p class="text-sm font-normal text-gray-500 text-center pt-2">{{ package?.shortDescritions }}</p>
             <p class="py-2 tracking-wide font-bold text-2xl text-gray-600 text-center">$ {{ package?.price }} / start</p>
-            <div class="text-center py-5">
+            <div class="text-center py-5 whitespace-pre-wrap">
                 {{ package?.details }}
             </div>
             <div class="text-center m-5">
