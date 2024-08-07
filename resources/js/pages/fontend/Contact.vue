@@ -1,27 +1,79 @@
 <script setup>
 import GuestLayout from '@/components/Layouts/GuestLayout.vue';
+import {ref} from "vue";
+import useAxios from "@/composables/useAxios.js";
+import {useToast} from "vue-toastification";
+import LoadingButton from "@/components/LoadingButton.vue";
+const {sendRequest, error, loading} = useAxios()
+const toast = useToast();
+const createContact = ref({
+    firstname:null,
+    lastname:null,
+    email:null,
+    phone:null,
+    message:null,
+})
+
+const handelContact = async () => {
+    const response = await sendRequest({
+        url: `/api/frontend/contact`,
+        method: 'POST',
+        data: createContact.value
+    })
+    toast.success(response?.data?.message)
+    createContact.value = {};
+}
 </script>
 <template>
     <GuestLayout>
-        <div class="w-1/2 my-10 mx-auto">
-            <div class="text-center flex flex-col justify-center items-center">
-                <p class="text-4xl font-normal text-gray-700 ">
-                    Have question?
-                </p>
-                <h1 class="font-bold text-4xl text-gray-600 mt-5 uppercase">SEND A MESSAGE</h1>
-            </div> 
-            <div class="mt-5 ">
-                <div class="my-5">
-                    <input type="text" placeholder="Name" class="bg-gray-100 py-4 w-full border border-gray-200">
+        <div class="w-1/2 my-10 mx-auto mt-52">
+
+
+            <form @submit.prevent="handelContact" class="p-5 lg:px-16">
+                <div class="flex justify-start items-center gap-3">
+                    <p class="uppercase text-amber-600 font-semibold ">Get In Touch</p>
+                    <hr class="w-14 h-1 bg-amber-600 ">
                 </div>
-                <div class="my-5">
-                    <input type="number" placeholder="Phone" class="bg-gray-100 py-4 w-full border border-gray-200">
+                <h1 class="text-3xl gradient-text py-2 font-medium">Have An Upcoming Projects? Let’s Talk to Now!</h1>
+                <div class="w-full flex gap-2 my-5">
+                    <div class="w-1/2 ">
+                        <input type="text" v-model="createContact.firstname" :disabled="loading"  placeholder="First Name" class=" w-full bg-gray-100 text-gray-700 border disabled:bg-gray-200 border-gray-300 placeholder:text-sm rounded">
+                        <span class="text-red-500" v-if="error?.response?.data?.errors?.firstname">{{
+                                error?.response?.data?.errors?.firstname[0]
+                            }}</span>
+                    </div>
+                    <div class="w-1/2">
+                        <input type="text" v-model="createContact.lastname" :disabled="loading"  placeholder="Last Name" class=" w-full bg-gray-100 text-gray-700 border disabled:bg-gray-200 border-gray-300 placeholder:text-sm rounded">
+                        <span class="text-red-500" v-if="error?.response?.data?.errors?.lastname">{{
+                                error?.response?.data?.errors?.lastname[0]
+                            }}</span>
+                    </div>
                 </div>
-                <div class="my-5">
-                    <textarea rows="1" placeholder="Question" class="bg-gray-100 py-4 w-full border border-gray-200"></textarea>
+                <div class="w-full flex gap-2 my-5">
+                    <div class="w-1/2 ">
+                        <input type="number" v-model="createContact.phone" :disabled="loading"   placeholder="Phone" class=" w-full bg-gray-100 text-gray-700 disabled:bg-gray-200 border border-gray-300 placeholder:text-sm rounded">
+                        <span class="text-red-500" v-if="error?.response?.data?.errors?.phone">{{
+                                error?.response?.data?.errors?.phone[0]
+                            }}</span>
+
+                    </div>
+                    <div class="w-1/2">
+                        <input type="email" v-model="createContact.email" :disabled="loading"  placeholder="E-mail" class=" w-full bg-gray-100 text-gray-700 border disabled:bg-gray-200  border-gray-300 placeholder:text-sm rounded">
+                        <span class="text-red-500" v-if="error?.response?.data?.errors?.email">{{
+                                error?.response?.data?.errors?.email[0]
+                            }}</span>
+                    </div>
                 </div>
-                <button class="text-white flex justify-center items-center py-2 px-5 text-base bg-amber-400 font-normal">Submit Now</button>
-            </div>
+                <div class=" ">
+                    <textarea v-model="createContact.message" :disabled="loading" id="" placeholder="Message" rows="5" class="w-full bg-gray-100 text-gray-700 border disabled:bg-gray-200 border-gray-300" ></textarea>
+                    <span class="text-red-500" v-if="error?.response?.data?.errors?.message">{{
+                            error?.response?.data?.errors?.message[0]
+                        }}</span>
+                </div>
+                <LoadingButton :isLoading="loading" class="w-full text-center">Submit Your Queries</LoadingButton>
+                <!--                            <Button type="submit" class="w-full py-2 my-3 bg-primary text-white px-3 py-2  hover:bg-teal-600 transition-all disabled:bg-teal-400 ease-in-out duration-500">Send</Button>-->
+            </form>
+
         </div>
         <div class="my-10 mx-20 ">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.5372301505513!2d90.42439698478422!3d23.77073443268977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7c0dc77f59d%3A0x23a188a3c575c454!2sThe%20Imperial%20Irish%20Kingdom!5e0!3m2!1sen!2sbd!4v1719148264943!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

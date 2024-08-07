@@ -1,6 +1,7 @@
 <script setup>
- import Header from './Header.vue';
+import Header from './Header.vue';
 import Footer from './Footer.vue';
+
 </script>
 <template>
     <div class="w-full">
@@ -8,7 +9,7 @@ import Footer from './Footer.vue';
             <Header/>
         </header>
         <main>
-            <slot />
+            <slot/>
         </main>
         <footer>
             <Footer/>
