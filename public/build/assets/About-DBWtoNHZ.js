@@ -1,1 +1,0 @@
-import{c as t,d as e,w as a,e as o}from"./app-DdwAoxYh.js";import{_ as s}from"./GuestLayout-kNaEWaJ1.js";const _=o("div",null," Aboutus ",-1),i={__name:"About",setup(c){return(r,n)=>(t(),e(s,null,{default:a(()=>[_]),_:1}))}};export{i as default};
