@@ -77,17 +77,15 @@
         </div>
     </div>
     <div class="bg-gray-800 text-white flex flex-col lg:flex-row justify-between px-10 py-4">
-        <div class="font-medium text-xl flex justify-center items-center">
+        <div class="font-medium text-xs flex justify-center items-center">
             <p class="text-center lg:text-start mb-3 lg:mb-0"> &copy; Copyright 2024 <a href="/"
                                                                                         class="text-fourthColor">
                 {{ settings?.profile?.name }}
             </a>. All Rights Reserved.</p>
         </div>
-        <!--        <div class="font-medium text-xl flex justify-center items-center gap-5">-->
-        <!--            <p class="text-sm">Terms & Condition </p>-->
-        <!--            <hr class="h-5 border ">-->
-        <!--            <p class="text-sm">Privacy & Policy</p>-->
-        <!--        </div>-->
+        <div class="font-medium text-xs flex justify-center items-center gap-5">
+            <p class="text-center text-lg-start text-xs"><a href="https://creativetechpark.com" target="_blank" class="text-fourthColor">Web Development Company </a> Creative Tech Park. </p>
+        </div>
     </div>
 </template>
 <script setup>
