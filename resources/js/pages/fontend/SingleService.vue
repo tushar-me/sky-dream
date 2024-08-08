@@ -16,7 +16,7 @@
                                 <small>{{ service?.shortDescritions }}</small>
                             </div>
 
-                            <a :href="`https://wa.me/01723717933?text=Hello, I want Talk Aoout, ${service.name}`" class="bg-primary gap-3 rounded-full py-2 flex items-center justify-center">
+                            <a :href="`https://wa.me/${settings?.profile?.whatsapp}?text=Hello, I want Talk Aoout, ${service.name}`" class="bg-primary gap-3 rounded-full py-2 flex items-center justify-center">
                                 <Icon name="ph:whatsapp-logo" class="text-white text-2xl" />
                                 <p class="text-white">WhatsApp Please</p>
                             </a>
@@ -41,8 +41,9 @@
 <script setup>
 import useAxios from "@/composables/useAxios.js";
 import {useRoute} from "vue-router";
-import {onMounted, ref} from "vue";
+import {inject, onMounted, ref} from "vue";
 import GuestLayout from "@/components/Layouts/GuestLayout.vue";
+const settings = inject('settings')
 const {sendRequest, loading, error} = useAxios();
 const service = ref(null)
 

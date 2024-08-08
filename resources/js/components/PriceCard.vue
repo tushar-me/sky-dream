@@ -15,7 +15,7 @@
                 {{ package?.details }}
             </div>
             <div class="text-center m-5">
-                <a :href="`https://wa.me/01723717933?text=hello mr jugol kumar how are you`" class="bg-primary gap-3 rounded-full py-2 flex items-center justify-center">
+                <a :href="`https://wa.me/${settings?.profile?.whatsapp}?text=hello mr jugol kumar how are you`" class="bg-primary gap-3 rounded-full py-2 flex items-center justify-center">
                     <Icon name="ph:whatsapp-logo" class="text-white text-2xl" />
                     <p class="text-white">WhatsApp Please</p>
                 </a>
@@ -24,7 +24,12 @@
     </div>
 </template>
 <script setup>
+import {inject} from "vue";
+
 defineProps({
     package:Object
 })
+
+const settings = inject('settings')
+
 </script>
