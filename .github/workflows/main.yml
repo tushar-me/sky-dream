@@ -1,53 +1,32 @@
-name: FTP Deploy
-
+name: Publish Website to CPanel
 on:
-  pull_request:
+  push:
     branches:
       - main
-
-
 jobs:
-  Deployment:
-    name: Deploy Action
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.1.0
         with:
           fetch-depth: 2
+      - name: Build assets
+        run: npm install && npm run build
 
-      - name: Create env file
-        run: |
-          touch .env
-          echo APP_NAME=MyAppName >> .env
-          echo APP_ENV=production >> .env
-          echo APP_DEBUG=false >> .env
-          echo LOG_CHANNEL=daily >> .env
-          echo "!.env" > .git-ftp-include
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.composer/cache/files
-          key: dependencies-composer-${{ hashFiles('composer.json') }}
-
-      - name: Setup PHP
+      - name: Install PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
-          coverage: none
+          php-version: '8.3' # Adjust to match the PHP version used by your Laravel project
+          tools: 'composer'
 
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-interaction --no-suggest
+      - name: Install PHP dependencies
+        run: composer install --no-dev --optimize-autoloader
 
-      - name: Adding Vendor
-        run: echo "!vendor/" > .git-ftp-include
-
-      - name: FTP Deploy Action
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: "host6.registrar-servers.com" #"premium229.web-hosting.com"
           username: "main@forestpainters.com"
           password: "b^dwH1&u_LJ&"
           protocol: ftp
-          server-dir: /home/forestpa/public_html/
