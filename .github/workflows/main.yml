@@ -1,7 +1,7 @@
 name: FTP Deploy
 
 on:
-  pull:
+  pull_request:
   branches: main
 
 jobs:
