@@ -1,0 +1,21 @@
+name: FTP Deploy
+
+on:
+  push:
+  branches: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: "host6.registrar-servers.com" #"premium229.web-hosting.com"
+          username: "main@forestpainters.com"
+          password: "6tziW-bgX,dZ"
+          protocol: ftp
