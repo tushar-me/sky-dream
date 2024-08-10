@@ -20,7 +20,7 @@ jobs:
           username: "main@forestpainters.com"
           password: "b^dwH1&u_LJ&"
           protocol: ftp
-          server-dir: /home/forestpa/public_html
+          server-dir: /home/forestpa/public_html/
 
 
       - name: Setup PHP
