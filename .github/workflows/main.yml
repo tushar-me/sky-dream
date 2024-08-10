@@ -5,23 +5,30 @@ on:
     branches:
       - main
 
+
 jobs:
-  deploy:
+  Deployment:
+    name: Deploy Action
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Upload files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      - uses: actions/checkout@v2.1.0
         with:
-          server: "host6.registrar-servers.com" #"premium229.web-hosting.com"
-          username: "main@forestpainters.com"
-          password: "b^dwH1&u_LJ&"
-          protocol: ftp
-          server-dir: /home/forestpa/public_html/
+          fetch-depth: 2
 
+      - name: Create env file
+        run: |
+          touch .env
+          echo APP_NAME=MyAppName >> .env
+          echo APP_ENV=production >> .env
+          echo APP_DEBUG=false >> .env
+          echo LOG_CHANNEL=daily >> .env
+          echo "!.env" > .git-ftp-include
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: dependencies-composer-${{ hashFiles('composer.json') }}
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -30,10 +37,17 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv
           coverage: none
 
-      - name: Run composer install
-        run: composer install -n --prefer-dist
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-suggest
 
-      - name: Prepare Laravel Application
-        run: |
-          cp .env.example .env
-          php artisan key:generate
+      - name: Adding Vendor
+        run: echo "!vendor/" > .git-ftp-include
+
+      - name: FTP Deploy Action
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        with:
+          server: "host6.registrar-servers.com" #"premium229.web-hosting.com"
+          username: "main@forestpainters.com"
+          password: "b^dwH1&u_LJ&"
+          protocol: ftp
+          server-dir: /home/forestpa/public_html/
