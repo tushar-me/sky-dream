@@ -51,3 +51,5 @@ Route::prefix('frontend')->group(function () {
 
     Route::get('get-setting', [FrontendController::class, 'getSettings']);
 });
+
+Route::get('/storeage', fn()=> \Illuminate\Support\Facades\Artisan::call('storage:link'));
