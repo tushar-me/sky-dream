@@ -71,33 +71,29 @@ onMounted(async () => {
                         relative bg-no-repeat bg-cover bg-center bg-fixed h-screen">
           <span class="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-black bg-opacity-70">
           </span>
-          <div class="container flex items-center relative z-40 h-screen pt-32">
+          <div class="container flex items-center relative z-40 min-h-screen h-full pt-32">
 
-              <div class="w-1/2" >
-                  <div class="">
+              <div class="w-full md:w-1/2" >
+                  <div class="w-full">
                       <div class="flex justify-start items-center gap-3">
-                          <p class="uppercase text-white font-bold text-xl">{{ headerSettings?.hero?.prefix }}</p>
+                          <p class="uppercase text-white font-bold text-sm md:text-xl">{{ headerSettings?.hero?.prefix }}</p>
                           <hr class="w-24 text-white border-2">
                       </div>
-                      <h1 class="uppercase text-5xl tracking-wide font-bold text-white py-10">{{ headerSettings?.hero?.title }}</h1>
+                      <h1 class="uppercase text-2xl md:text-5xl tracking-wide font-bold text-white py-4 md:py-10">{{ headerSettings?.hero?.title }}</h1>
                       <p class="font-normal text-md text-white max-w-lg">{{ headerSettings?.hero?.slogan }}</p>
-                      <div class="flex items-center gap-5 py-10">
-                          <RouterLink to="/Contact" class="group" >
-                              <button class="uppercase flex justify-center items-center gap-3 font-semibold my-3 bg-primary text-white border-primary px-3 py-3.5  hover:bg-teal-600 transition-all disabled:bg-teal-400 ease-in-out duration-500">
-                                  <Icon name="material-symbols:arrow-outward" class=" text-2xl text-white "/>
-                                  discover More
-                              </button>
+                      <div class="flex w-full flex-col items-center md:gap-5 py-10">
+                          <RouterLink  to="/Contact"  class="uppercase w-full flex justify-center items-center gap-3 font-semibold my-3 bg-primary text-white border-primary px-3 py-3.5  hover:bg-teal-600 transition-all disabled:bg-teal-400 ease-in-out duration-500">
+                              <Icon name="material-symbols:arrow-outward" class=" text-2xl text-white "/>
+                              discover More
                           </RouterLink>
-                          <RouterLink to="/all-services" class="group" >
-                              <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white border-2 border-primary py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
-                                  <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
-                                  Our Services
-                              </button>
+                          <RouterLink to="/all-services"  class="uppercase w-full flex justify-center items-center gap-3 text-primary bg-white border-2 border-primary py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
+                              <Icon name="material-symbols:arrow-outward" class=" text-2xl text-primary group-hover:text-fourthColor transition-all ease-in-out duration-500"/>
+                              Our Services
                           </RouterLink>
                       </div>
                   </div>
               </div>
-              <div class="w-full lg:w-1/2">
+              <div class="w-full lg:w-1/2 md:block hidden">
                   <div class="flex flex-wrap">
                       <div class="w-full lg:w-1/2 p-2" v-for="item in services?.selectedServices">
                           <div class="relative w-full overflow-hidden group transition-all ease-in-out duration-1000">
@@ -130,13 +126,13 @@ onMounted(async () => {
                         relative bg-no-repeat bg-cover bg-center h-screen mt-20">
           <div class="container flex w-full justify-center items-center">
               <div class="w-full h-screen mb-10 flex justify-start items-center relative z-30">
-                  <div class="w-1/2 ">
-                      <div>
+                  <div class="w-full md:w-1/2">
+                      <div class="w-full">
                           <div class="flex items-center gap-3">
-                              <p class="uppercase text-white font-bold text-xl">Get consultation </p>
+                              <p class="uppercase text-white font-bold text-sm md:text-xl">Get consultation </p>
                               <hr class="w-20 border-2 bg-white">
                           </div>
-                          <h1 class="text-5xl text-white tracking-widest leading-1 font-bold my-10">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
+                          <h1 class="text-2xl md:text-5xl text-white tracking-widest leading-1 font-bold my-10">Get A Free Consultation Contact Us <span class="text-amber-600">!</span></h1>
                           <div class="flex justify-start items-center gap-5 my-10">
                               <RouterLink to="/Contact" class="group" >
                                   <button class="uppercase flex justify-center items-center gap-3 text-primary bg-white py-3 px-5 font-semibold group-hover:text-fourthColor transition-all ease-in-out duration-500">
@@ -147,7 +143,7 @@ onMounted(async () => {
                           </div>
                       </div>
                   </div>
-                  <div class="w-1/2">
+                  <div class="w-1/2 hidden md:block">
                       <div class="w-full h-full">
                           <img src="https://img.freepik.com/free-photo/man-working-wall-with-paint-roller_23-2148384435.jpg?t=st=1719746200~exp=1719749800~hmac=2d0cb6fe9ad18923ed8cdda8b8f7bba0077f7098ecad4ea48a44bde2018961b9&w=740" alt="">
                       </div>
@@ -155,22 +151,24 @@ onMounted(async () => {
               </div>
 
           </div>
+
+
           <div class="container bg-sky-gradient text-center py-16 mx-10 -mt-40 relative z-40 flex justify-center items-center">
               <div class="w-1/4">
-                  <h1 class="font-bold text-6xl text-white">{{  headerSettings?.counter?.project_complate }}</h1>
-                  <p class="text-xl text-white font-normal">Project Completed</p>
+                  <h1 class="font-bold text-xl md:text-6xl text-white">{{  headerSettings?.counter?.project_complate }}</h1>
+                  <p class="text-xs md:text-xl text-white font-normal">Project Completed</p>
               </div>
               <div class="w-1/4">
-                  <h1 class="font-bold text-6xl text-white">{{ headerSettings?.counter?.customer_satisfied }}</h1>
-                  <p class="text-xl text-white font-normal">Customer Satisfied</p>
+                  <h1 class="font-bold text-xl md:text-6xl  text-white">{{ headerSettings?.counter?.customer_satisfied }}</h1>
+                  <p class="text-xs md:text-xl text-white font-normal">Customer Satisfied</p>
               </div>
               <div class="w-1/4">
-                  <h1 class="font-bold text-6xl text-white">{{ headerSettings?.counter?.expart_team }}</h1>
-                  <p class="text-xl text-white font-normal">Expert Team Members</p>
+                  <h1 class="font-bold text-xl md:text-6xl  text-white">{{ headerSettings?.counter?.expart_team }}</h1>
+                  <p class="text-xs md:text-xl text-white font-normal">Expert Team Members</p>
               </div>
               <div class="w-1/4">
-                  <h1 class="font-bold text-6xl text-white">{{ headerSettings?.counter?.award }}</h1>
-                  <p class="text-xl font-normal text-white">Awards Winner</p>
+                  <h1 class="font-bold text-xl md:text-6xl  text-white">{{ headerSettings?.counter?.award }}</h1>
+                  <p class="text-xs md:text-xl font-normal text-white">Awards Winner</p>
               </div>
           </div>
       </section>
