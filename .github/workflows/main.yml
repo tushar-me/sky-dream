@@ -33,5 +33,5 @@ jobs:
 
       - name: Prepare Laravel Application
         run: |
-          cp .env.ci .env
+          cp .env.example .env
           php artisan key:generate
