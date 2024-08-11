@@ -14,14 +14,14 @@ jobs:
       - name: Build assets
         run: npm install && npm run build
 
-#      - name: Install PHP and Composer
-#        uses: shivammathur/setup-php@v2
-#        with:
-#          php-version: '8.3'
-#          tools: 'composer'
-#
-#      - name: Install PHP dependencies
-#        run: composer install --no-dev --optimize-autoloader
+      - name: Install PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: 'composer'
+
+      - name: Install PHP dependencies
+        run: composer update --no-dev --optimize-autoloader
 
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
