@@ -69,7 +69,7 @@ onMounted(async () => {
     <GuestLayout>
         <!---------Hero section------------->
         <section class="bg-[url(https://as2.ftcdn.net/v2/jpg/00/33/07/75/1000_F_33077580_5RQxiIZ2TwENiWnehethQw6TYlheX0rS.jpg)]
-                        relative bg-no-repeat bg-cover bg-center bg-fixed h-screen">
+                        relative bg-no-repeat bg-cover bg-center bg-fixed min-h-screen h-full md:py-20">
           <span class="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-black bg-opacity-70">
           </span>
             <div class="container flex items-center relative z-40 min-h-screen h-full pt-32">
