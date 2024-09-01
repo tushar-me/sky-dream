@@ -13,8 +13,7 @@ import Toast, {useToast} from "vue-toastification";
 import "vue-toastification/dist/index.css";
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
 import {useAuthStore} from "@/stores/useAuthStore.js";
-// import {useAuthStore} from "@/stores/useAuthStore.js";
-// const authStore = useAuthStore()
+
 const toast = useToast();
 
 const app = createApp(App)
