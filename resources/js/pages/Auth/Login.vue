@@ -15,9 +15,6 @@
                     <small class="text-red-500" v-if="authStore.error?.response?.data?.errors?.password">{{ authStore.error?.response?.data?.errors?.password[0] }}</small>
                 </div>
                 <LoadingButton :isLoading="authStore.loading">Login</LoadingButton>
-<!--                <button type="submit" :disabled="authStore.loading" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-blue-400">-->
-<!--                    {{ authStore.loading ? 'Loading...' : 'Login' }}-->
-<!--                </button>-->
             </form>
         </div>
     </div>
@@ -36,8 +33,8 @@ const router = useRouter()
 
 
 const loginData = ref({
-    email: 'admin@admin.com',
-    password: 12345678,
+    email: null,
+    password: null,
     remember_me:false,
 })
 
@@ -49,10 +46,4 @@ const handelLogin = async () => {
     await authStore.login(loginData.value)
     await router.push({name: "Dashboard"})
 }
-
-// onMounted(() =>{
-//   if(!authStore.isLoggedIn){
-//     router.push({name:"dashboard"})
-//   }
-// })
 </script>
