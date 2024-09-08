@@ -26,7 +26,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: {{ secret.SERVER_NAME }}
-          username: {{ secret.USER_NAME }}
-          password: {{ secret.PASSWORD }}
-          protocol: {{ secret.PROTOCOL }}
+          server: ${{ secret.SERVER_NAME }}
+          username: ${{ secret.USER_NAME }}
+          password: ${{ secret.PASSWORD }}
+          protocol: ${{ secret.PROTOCOL }}
