@@ -1,5 +1,5 @@
 <template xmlns="http://www.w3.org/1999/html">
-    <Button :disabled="isLoading" class="my-3 bg-primary text-white px-3 py-2  hover:bg-teal-600 transition-all disabled:bg-teal-400 ease-in-out duration-500">
+    <button :disabled="isLoading" class="my-3 bg-primary text-white px-3 py-2  hover:bg-teal-600 transition-all disabled:bg-teal-400 ease-in-out duration-500">
         <span v-if="!isLoading">
             <slot></slot>
         </span>
@@ -21,7 +21,7 @@
             </svg>
             <span>Loading</span>
         </span>
-    </Button>
+    </button>
 </template>
 
 <script setup>

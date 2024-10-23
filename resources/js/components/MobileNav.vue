@@ -32,19 +32,16 @@ const toggleNav = ref(false);
 
                         <ul class="px-5 text-secondary">
                             <li class="pt-2">
-                                <RouterLink to="/">Home</RouterLink>
+                                <RouterLink to="/" class="">Home</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/">Services</RouterLink>
+                                <RouterLink :to="{name:'Front.Services'}" class="">Services</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/">Package</RouterLink>
+                                <RouterLink :to="{name:'Front.Package'}" class="">Package</RouterLink>
                             </li>
                             <li class="pt-2">
-                                <RouterLink to="/">Portfolio</RouterLink>
-                            </li>
-                            <li class="pt-2">
-                                <RouterLink to="/">About Us</RouterLink>
+                                <RouterLink :to="{name:'Portfolio'}" class="">Portfolio</RouterLink>
                             </li>
                         </ul>
                     </div>

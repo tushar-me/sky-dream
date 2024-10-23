@@ -1,18 +1,18 @@
 <template>
     <GuestLayout>
-        <div class="min-h-screen mt-52">
+        <div class="min-h-screen my-12 lg:mt-52">
             <div class="container mx-auto">
-                <div class="grid grid-cols-2 gap-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div class="grid-cols-1">
                         <img class="max-h-72 object-cover w-full" :src="service.image" />
                     </div>
                     <div class="grid-cols-1">
-                        <h1 class="font-bold text-5xl text-primary">{{ service?.name }}</h1>
-                        <div class="mt-10 flex flex-col gap-3">
-                            <p class="font-semibold text-2xl">Starting Price: {{ service?.price }}</p>
-                            <p class="font-semibold text-2xl">Speciality: {{ service?.speciality }}</p>
+                        <h1 class="font-bold text-3xl lg:text-5xl text-primary">{{ service?.name }}</h1>
+                        <div class="mt-3 lg:mt-10 flex flex-col lg:gap-3">
+                            <p class="font-semibold text-lg lg:text-2xl">Starting Price: {{ service?.price }}</p>
+                            <p class="font-semibold text-lg lg:text-2xl">Speciality: {{ service?.speciality }}</p>
                             <div class="flex flex-col gap-3">
-                                <p class="font-semibold text-2xl">Short Breaf : </p>
+                                <p class="font-semibold text-lg lg:text-2xl">Short Breaf : </p>
                                 <small>{{ service?.shortDescritions }}</small>
                             </div>
 

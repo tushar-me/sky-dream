@@ -26,9 +26,7 @@ const handelContact = async () => {
 </script>
 <template>
     <GuestLayout>
-        <div class="w-1/2 my-10 mx-auto mt-52">
-
-
+        <div class="w-full lg:w-1/2 my-10 mx-auto mt-20 lg:mt-52">
             <form @submit.prevent="handelContact" class="p-5 lg:px-16">
                 <div class="flex justify-start items-center gap-3">
                     <p class="uppercase text-amber-600 font-semibold ">Get In Touch</p>
@@ -36,7 +34,7 @@ const handelContact = async () => {
                 </div>
                 <h1 class="text-3xl gradient-text py-2 font-medium">Have An Upcoming Projects? Let’s Talk to Now!</h1>
                 <div class="w-full flex gap-2 my-5">
-                    <div class="w-1/2 ">
+                    <div class="w-full lg:w-1/2 ">
                         <input type="text" v-model="createContact.firstname" :disabled="loading"  placeholder="First Name" class=" w-full bg-gray-100 text-gray-700 border disabled:bg-gray-200 border-gray-300 placeholder:text-sm rounded">
                         <span class="text-red-500" v-if="error?.response?.data?.errors?.firstname">{{
                                 error?.response?.data?.errors?.firstname[0]
@@ -75,8 +73,8 @@ const handelContact = async () => {
             </form>
 
         </div>
-        <div class="my-10 mx-20 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418.5372301505513!2d90.42439698478422!3d23.77073443268977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7c0dc77f59d%3A0x23a188a3c575c454!2sThe%20Imperial%20Irish%20Kingdom!5e0!3m2!1sen!2sbd!4v1719148264943!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="my-10 lg:mx-20 mx-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6708.299179926398!2d103.85584667561598!3d1.3080902792371925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c83e64fe33%3A0x229883f341b544f7!2s101%20Kitchener%20Rd%2C%20Singapore%20208511!5e0!3m2!1sen!2sin!4v1688026309089!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </GuestLayout>
 </template>
